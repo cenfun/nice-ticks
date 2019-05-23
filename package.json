@@ -1,0 +1,25 @@
+{
+  "name": "nice-ticks",
+  "version": "1.0.0",
+  "description": "Nice Numbers for Graph Labels",
+  "main": "dist/nice-ticks.js",
+  "scripts": {
+    "build": "npx webpack --config webpack.config.js --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cenfun/nice-ticks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cenfun/nice-ticks/issues"
+  },
+  "homepage": "https://github.com/cenfun/nice-ticks#readme",
+  "devDependencies": {
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  }
+}
