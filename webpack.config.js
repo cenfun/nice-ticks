@@ -7,6 +7,7 @@ module.exports = {
         path: path.resolve('./dist'),
         filename: 'nice-ticks.js',
         library: 'nice-ticks',
-        libraryTarget: 'umd'
+        libraryTarget: 'umd',
+        globalObject: 'this'
     }
 };

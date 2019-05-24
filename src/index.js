@@ -1,6 +1,6 @@
 function toStr(str) {
     return "" + str;
-};
+}
 
 // return float part length
 function fLen(n) {
@@ -10,35 +10,35 @@ function fLen(n) {
         return a[1].length;
     }
     return 0;
-};
+}
 // return float as int
 function fInt(n) {
     var s = toStr(n);
     return parseInt(s.replace(".", ""));
-};
+}
 
 function add(n1, n2) {
     var r1 = fLen(n1);
     var r2 = fLen(n2);
-    if (r1 + r2 == 0) {
+    if (r1 + r2 === 0) {
         return n1 + n2;
     } else {
         var m = Math.pow(10, Math.max(r1, r2));
         return (Math.round(n1 * m) + Math.round(n2 * m)) / m;
     }
-};
+}
 
 function mul(n1, n2) {
     var r1 = fLen(n1);
     var r2 = fLen(n2);
-    if (r1 + r2 == 0) {
+    if (r1 + r2 === 0) {
         return n1 * n2;
     } else {
         var m1 = fInt(n1);
         var m2 = fInt(n2);
         return (m1 * m2) / Math.pow(10, r1 + r2);
     }
-};
+}
 
 function nice(x, round) {
     var exp = Math.floor(Math.log(x) / Math.log(10));
@@ -68,17 +68,32 @@ function nice(x, round) {
     return nf * Math.pow(10, exp);
 }
 
+const toNum = function (num) {
+    if (typeof (num) !== "number") {
+        num = parseFloat(num);
+    }
+    if (isNaN(num)) {
+        num = 0;
+    }
+    return num;
+};
+
 
 //https://wiki.tcl-lang.org/page/Chart+generation+support
 
-const niceNumber = function (min, max, num = 4) {
-    if (min == max) {
+const niceTicks = function (min, max, num = 4) {
+    min = toNum(min);
+    max = toNum(max);
+    num = toNum(num);
+
+    if (min === max) {
         max = min + 1;
     } else if (min > max) {
         var n = min;
         min = max;
         max = n;
     }
+
     var r = nice(max - min, false);
     var d = nice(r / (num - 1), true);
     var s = mul(Math.floor(min / d), d);
@@ -92,4 +107,4 @@ const niceNumber = function (min, max, num = 4) {
     return arr;
 };
 
-module.exports = niceNumber;
+module.exports = niceTicks;
