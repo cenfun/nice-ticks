@@ -30,3 +30,8 @@ console.log(ticks);
 
 ## Reference
 "Nice Numbers for Graph Labels", Graphics Gems, pp 61-63.  
+
+## CHANGELOG
+
+* v1.0.1
+    * Support importing ESM from webpack
