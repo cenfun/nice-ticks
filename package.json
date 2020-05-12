@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "Nice Numbers for Graph Labels",
   "main": "dist/nice-ticks.js",
+  "module": "src/index.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
     "build": "npx webpack --config webpack.config.js --mode production",
     "test": "npx mocha"

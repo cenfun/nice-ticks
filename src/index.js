@@ -81,7 +81,7 @@ const toNum = function (num) {
 
 //https://wiki.tcl-lang.org/page/Chart+generation+support
 
-const niceTicks = function (min, max, num = 4) {
+export default function niceTicks(min, max, num = 4) {
     min = toNum(min);
     max = toNum(max);
     num = toNum(num);
@@ -105,6 +105,4 @@ const niceTicks = function (min, max, num = 4) {
         v = add(v, d);
     }
     return arr;
-};
-
-module.exports = niceTicks;
+}
