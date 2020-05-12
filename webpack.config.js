@@ -8,6 +8,7 @@ module.exports = {
         filename: 'nice-ticks.js',
         library: 'nice-ticks',
         libraryTarget: 'umd',
+        libraryExport: 'default',
         globalObject: 'this'
     }
 };
