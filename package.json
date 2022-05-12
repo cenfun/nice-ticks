@@ -1,32 +1,33 @@
 {
-  "name": "nice-ticks",
-  "version": "1.0.1",
-  "description": "Nice Numbers for Graph Labels",
-  "main": "dist/nice-ticks.js",
-  "module": "src/index.js",
-  "types": "src/index.d.ts",
-  "files": [
-    "src",
-    "dist"
-  ],
-  "scripts": {
-    "build": "npx webpack --config webpack.config.js --mode production",
-    "test": "npx mocha"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cenfun/nice-ticks.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cenfun/nice-ticks/issues"
-  },
-  "homepage": "https://github.com/cenfun/nice-ticks#readme",
-  "devDependencies": {
-    "mocha": "^7.1.2",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
-  }
+    "name": "nice-ticks",
+    "version": "1.0.1",
+    "description": "Nice Numbers for Graph Labels",
+    "main": "dist/nice-ticks.js",
+    "module": "src/index.js",
+    "types": "src/index.d.ts",
+    "files": [
+        "src",
+        "dist"
+    ],
+    "scripts": {
+        "build": "npx webpack --config webpack.config.js --mode production",
+        "test": "npx mocha"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cenfun/nice-ticks.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/cenfun/nice-ticks/issues"
+    },
+    "homepage": "https://github.com/cenfun/nice-ticks#readme",
+    "devDependencies": {
+        "eslint": "^8.15.0",
+        "mocha": "^10.0.0",
+        "webpack": "^5.72.1",
+        "webpack-cli": "^4.9.2"
+    }
 }
