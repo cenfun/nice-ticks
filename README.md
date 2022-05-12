@@ -31,6 +31,9 @@ const niceTicks = window["nice-ticks"];
 </script>
 ```
 
+## Test Online
+[https://cenfun.github.io/nice-ticks/](https://cenfun.github.io/nice-ticks/)
+
 ## Reference
 "Nice Numbers for Graph Labels", Graphics Gems, pp 61-63  
 [Nice-Numbers-for-Graph-Labels.pdf](docs/Nice-Numbers-for-Graph-Labels.pdf)
