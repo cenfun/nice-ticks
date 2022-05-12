@@ -8,13 +8,13 @@ npm install nice-ticks
 
 ## Usage
 ```js
-const niceTicks = require("nice-ticks");
+var niceTicks = require("nice-ticks");
 
-const minValue = 0.81;
-const maxValue = 12.3
-const numTicks = 4; //default
+var minValue = 0.81;
+var maxValue = 12.3
+var numTicks = 4; //default
 
-const ticks = niceTicks(minValue, maxValue, numTicks);
+var ticks = niceTicks(minValue, maxValue, numTicks);
 
 console.log(ticks);
 //[0, 5, 10, 15]
@@ -27,7 +27,7 @@ console.log(ticks);
 ```html
 <script src="https://cdn.jsdelivr.net/npm/nice-ticks@latest/dist/nice-ticks.js"></script>
 <script>
-const niceTicks = window["nice-ticks"];
+var niceTicks = window["nice-ticks"];
 </script>
 ```
 
@@ -46,6 +46,9 @@ The naive label-selection algorithm takes the data range and divides it into n e
 We here describe a simple method for generating nice graph labels. 
 
 ## CHANGELOG
+
+* v1.0.2
+    * Support IE (ES5)
 
 * v1.0.1
     * Support importing ESM from webpack

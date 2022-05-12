@@ -162,7 +162,7 @@ const fixableRules = {
     'no-useless-computed-key': 'error',
     'no-useless-rename': 'error',
     'no-useless-return': 'error',
-    'no-var': ['warn'],
+    'no-var': ['off'],
     'no-whitespace-before-property': 'error',
     'object-curly-newline': ['error', {
         'ExportDeclaration': {
@@ -208,10 +208,10 @@ const fixableRules = {
         'next': 'block',
         'prev': '*'
     }],
-    'prefer-const': 'error',
+    'prefer-const': 'off',
     'prefer-numeric-literals': 'error',
     'prefer-object-spread': 'error',
-    'prefer-template': 'error',
+    'prefer-template': 'off',
     'quotes': ['error', 'single', {
         'avoidEscape': true
     }],

@@ -56,17 +56,18 @@
         </tr>
     </table>
 
+    <!-- <script src="../dist/nice-ticks.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/nice-ticks@latest/dist/nice-ticks.js"></script>
     <script>
-        const niceTicks = window["nice-ticks"];
-        const $ = document.querySelector.bind(document);
+        var niceTicks = window["nice-ticks"];
+        var $ = document.querySelector.bind(document);
 
         $(".generate").addEventListener("click", function () {
-            const minValue = $(".min").value;
-            const maxValue = $(".max").value
-            const numTicks = $(".num").value
+            var minValue = $(".min").value;
+            var maxValue = $(".max").value
+            var numTicks = $(".num").value
 
-            const ticks = niceTicks(minValue, maxValue, numTicks);
+            var ticks = niceTicks(minValue, maxValue, numTicks);
 
             console.log(ticks);
 

@@ -1,6 +1,6 @@
 {
     "name": "nice-ticks",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Nice Numbers for Graph Labels",
     "main": "dist/nice-ticks.js",
     "module": "src/index.js",
