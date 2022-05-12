@@ -1,14 +1,15 @@
 # nice-ticks
-Nice Ticks for Node.JS and Browser
+Nice Ticks is JavaScript Version "Nice Numbers for Graph Labels"
+
+## Why
+
 
 ## Install
 ```sh
 npm install nice-ticks
 ```
-## For Browser
-```html
-<script src="path-to/nice-ticks/dist/nice-ticks.js"></script>
-```
+
+
 
 ## Usage
 ```js
@@ -27,6 +28,13 @@ console.log(ticks);
 
 [more test cases](./test/test.js)
 
+## Browser
+```html
+<script src="https://cdn.jsdelivr.net/npm/nice-ticks@latest/dist/nice-ticks.js"></script>
+<script>
+var niceTicks = window["nice-ticks"];
+</script>
+```
 
 ## Reference
 "Nice Numbers for Graph Labels", Graphics Gems, pp 61-63.  
