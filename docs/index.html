@@ -38,16 +38,22 @@
         </tr>
         <tr>
             <td>ticks:</td>
-            <td><input class="num" value="" /> (default is 4)</td>
+            <td><input class="num" value="4" /> (Results may not match but will be close, default is 4)</td>
         </tr>
         <tr>
             <td></td>
             <td><button class="generate">generate</button></td>
         </tr>
         <tr>
-            <td></td>
+            <td>nice</td>
             <td>
-                <textarea class="results" style="width: 300px; height:80px;"></textarea>
+                <input class="nice" />
+            </td>
+        </tr>
+        <tr>
+            <td>native</td>
+            <td>
+                <input class="native" /> (probably don't want)
             </td>
         </tr>
         <tr>
@@ -62,15 +68,27 @@
         var $ = document.querySelector.bind(document);
 
         $(".generate").addEventListener("click", function () {
-            var minValue = $(".min").value;
-            var maxValue = $(".max").value
-            var numTicks = $(".num").value
+            var minValue = parseFloat($(".min").value);
+            var maxValue = parseFloat($(".max").value)
+            var numTicks = parseInt($(".num").value)
 
-            var ticks = niceTicks(minValue, maxValue, numTicks);
+            var niceList = niceTicks(minValue, maxValue, numTicks);
 
-            console.log(ticks);
+            console.log(niceList);
 
-            $(".results").value = ticks.join(", ");
+            $(".nice").value = niceList.join(", ");
+
+            //native ticks
+            numTicks = Math.max(numTicks || 4, 2) - 2;
+            var nativeList = [minValue];
+            var step = (maxValue - minValue) / numTicks;
+            for (var i = 0; i < numTicks; i++) {
+                nativeList.push(minValue + step);
+            }
+            nativeList.push(maxValue);
+            console.log(nativeList);
+
+            $(".native").value = nativeList.join(", ");
         })
 
     </script>

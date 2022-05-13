@@ -1,5 +1,14 @@
 # nice-ticks
-Nice Ticks is JavaScript Version "Nice Numbers for Graph Labels"
+Nice Ticks is JavaScript Version "Nice Numbers for Graph Labels"  
+For example, if the data range is 0.81 to 12.3, and we need 4 ticks (depends on your graph size) in axis.  
+The native ticks should be following but probably not what we want:  
+```js
+ [0.81, 6.555, 6.555, 12.3]
+```
+So nice-ticks will help generate "nice" ticks like:
+```js
+[0, 5, 10, 15]
+```
 
 ## Install
 ```sh
@@ -12,7 +21,8 @@ var niceTicks = require("nice-ticks");
 
 var minValue = 0.81;
 var maxValue = 12.3
-var numTicks = 4; //default
+// Results may not match but will be close, default is 4
+var numTicks = 4;
 
 var ticks = niceTicks(minValue, maxValue, numTicks);
 
