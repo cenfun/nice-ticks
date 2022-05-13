@@ -3,11 +3,11 @@ Nice Ticks is JavaScript Version "Nice Numbers for Graph Labels"
 For example, if the data range is 0.81 to 12.3, and we need 4 ticks (depends on your graph size) in axis.  
 The native ticks should be following but probably not what we want:  
 ```js
- [0.81, 6.555, 6.555, 12.3]
+[0.81, 6.555, 6.555, 12.3] ×
 ```
 So nice-ticks will help generate "nice" ticks like:
 ```js
-[0, 5, 10, 15]
+[0, 5, 10, 15] √
 ```
 
 ## Install
