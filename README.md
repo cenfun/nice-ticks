@@ -21,7 +21,7 @@ var niceTicks = require("nice-ticks");
 
 var minValue = 0.81;
 var maxValue = 12.3
-// Results may not match but will be close, default is 4
+// Results may not match exactly but close, default is 4
 var numTicks = 4;
 
 var ticks = niceTicks(minValue, maxValue, numTicks);
