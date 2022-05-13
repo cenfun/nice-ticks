@@ -79,11 +79,12 @@
             $(".nice").value = niceList.join(", ");
 
             //native ticks
-            numTicks = Math.max(numTicks || 4, 2) - 2;
+            numTicks = Math.max(numTicks || 4, 2);
             var nativeList = [minValue];
-            var step = (maxValue - minValue) / numTicks;
+            var step = (maxValue - minValue) / (numTicks - 1);
+            numTicks = numTicks - 2;
             for (var i = 0; i < numTicks; i++) {
-                nativeList.push(minValue + step);
+                nativeList.push(Number((minValue + step * (i + 1)).toFixed(2)));
             }
             nativeList.push(maxValue);
             console.log(nativeList);
